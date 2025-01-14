@@ -1,4 +1,4 @@
-package com.sinlord.aatdesktop.communication;
+package com.sinlord.aatdesktop.http;
 
 import java.io.BufferedReader;
 import java.io.IOException;
