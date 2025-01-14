@@ -33,7 +33,7 @@ public class principal {
 
     private static void initializeProperties() {
         try{
-            PROPERTIES.load(principal.class.getResourceAsStream("/config.properties"));
+            PROPERTIES.load(principal.class.getResourceAsStream("/default.properties"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
