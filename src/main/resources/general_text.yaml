@@ -83,3 +83,35 @@ text:
     en: "REF port:"
     es: "Puerto de REF:"
     zh_ch: "REF端口"
+  failed_getting_forwarded_list:
+    en: "Cannot get the list of forwarded port"
+    es: "No ha podido leer la lista de puerto"
+    zh_ch: "未能读取已设置转发的端口信息"
+  failed_getting_devices_list:
+    en: "Cannot get the list of connected devices"
+    es: "No ha podido leer la lista de positivos conectados"
+    zh_ch: "未能读取已连接设备的信息"
+  success_forward_port:
+    en: "Successfully forwarded port for device: "
+    es: "Se ha reenviado el puerto para dispositivo:  "
+    zh_ch: "端口转发已设置给设备: "
+  failed_forward_port:
+    en: "Failed to forward port for device: "
+    es: "No ha podido reenviar el puerto para dispositivo:  "
+    zh_ch: "端口转发未能设置给设备: "
+  connectDUT_pass:
+    en: "Successfully connected to DUT "
+    es: "Se ha conectado con DUT "
+    zh_ch: "已连接DUT "
+  connectREF_pass:
+    en: "Successfully connected to REF "
+    es: "Se ha conectado con REF "
+    zh_ch: "已连接REF "
+  connectDUT_failed:
+    en: "Failed to connect DUT "
+    es: "No ha podido conectar DUT "
+    zh_ch: "未能连接DUT "
+  connectREF_failed:
+    en: "Failed to connect REF "
+    es: "No ha podido conectar REF "
+    zh_ch: "未能连接REF "

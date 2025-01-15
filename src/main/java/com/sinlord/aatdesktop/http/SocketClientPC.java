@@ -10,8 +10,8 @@ import java.net.Socket;
  * @author SINLORDEP
  */
 public class SocketClientPC {
-    private String host;
-    private int port;
+    private final String host;
+    private final int port;
     private Socket socket;
     private PrintWriter out;
     private BufferedReader in;
@@ -26,7 +26,6 @@ public class SocketClientPC {
         if(socket.isConnected()) {
             out = new PrintWriter(socket.getOutputStream(), true);
             in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            System.out.println("Connected to Android service.");
             return true;
         }
         return false;

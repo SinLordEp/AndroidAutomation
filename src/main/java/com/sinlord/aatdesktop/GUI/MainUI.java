@@ -1,9 +1,13 @@
 package com.sinlord.aatdesktop.GUI;
 
 import com.sinlord.aatdesktop.control.MainController;
-import com.sinlord.aatdesktop.util.EventListener;
 
 import javax.swing.*;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.SimpleAttributeSet;
+import javax.swing.text.StyleConstants;
+import javax.swing.text.StyledDocument;
+import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
@@ -12,7 +16,7 @@ import static com.sinlord.aatdesktop.principal.getProperty;
 /**
  * @author SINLORDEP
  */
-public class MainUI implements EventListener<String[]> {
+public class MainUI{
     private final MainController controller;
     private JButton button_connectDUT;
     private JButton button_connectREF;
@@ -43,12 +47,12 @@ public class MainUI implements EventListener<String[]> {
     private JButton button_clearLog;
     private JPanel panel_main;
     private JTextPane textPane_log;
+    private StyledDocument log_document;
     private JComboBox comboBox_plan;
     private JButton button_language;
 
     public MainUI(MainController controller) {
         this.controller = controller;
-        controller.addListener(this);
     }
 
     public void run() {
@@ -69,6 +73,8 @@ public class MainUI implements EventListener<String[]> {
 
     private void initialize() {
         setUIText();
+        buttonListener();
+        log_document = textPane_log.getStyledDocument();
     }
 
     private void setUIText(){
@@ -104,11 +110,30 @@ public class MainUI implements EventListener<String[]> {
     }
 
     private void buttonListener(){
-
+        button_connectDUT.addActionListener(_ -> controller.connectDUT(Integer.parseInt(textField_PortDUT.getText())));
+        button_connectREF.addActionListener(_ -> controller.connectREF(Integer.parseInt(textField_PortREF.getText())));
     }
 
-    @Override
-    public void onEvent(String event, String[] data) {
-
+    public void appendLog(LogStage stage, String... message) {
+        SimpleAttributeSet set = new SimpleAttributeSet();
+        Color color = switch (stage){
+            case ONGOING -> Color.blue;
+            case PASS -> Color.green;
+            case FAIL -> Color.red;
+            case ERROR -> Color.ORANGE;
+            case INFO -> Color.darkGray;
+        };
+        StyleConstants.setForeground(set, color);
+        try {
+            if(message.length == 1){
+                log_document.insertString(log_document.getLength(), UIText.getDialog().getText(message[0]) + "\n", set);
+            }else{
+                log_document.insertString(log_document.getLength(), UIText.getDialog().getText(message[0])+ message[1] + "\n", set);
+            }
+            textPane_log.setCaretPosition(log_document.getLength());
+        } catch (BadLocationException e) {
+            UIText.getDialog().message("Failed to append log message with Cause: " + e.getMessage());
+        }
     }
+
 }
