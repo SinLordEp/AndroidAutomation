@@ -1,0 +1,85 @@
+text:
+  frame_title:
+    en: "Android Automation Test Tool"
+    es: "Android Automation Test Tool"
+    zh_ch: "安卓自动化测试工具"
+  button_connectDUT:
+    en: "Connect DUT"
+    es: "Conectar con DUT"
+    zh_ch: "连接DUT"
+  button_connectREF:
+    en: "Connect REF"
+    es: "Conectar con REF"
+    zh_ch: "连接REF"
+  button_add:
+    en: "Add"
+    es: "Añadir"
+    zh_ch: "新增"
+  button_update:
+    en: "Modify"
+    es: "Modificar"
+    zh_ch: "修改"
+  button_delete:
+    en: "Delete"
+    es: "Eliminar"
+    zh_ch: "删除"
+  button_start:
+    en: "Start"
+    es: "Empezar"
+    zh_ch: "开始"
+  button_pause:
+    en: "Pause"
+    es: "Pausar"
+    zh_ch: "暂停"
+  button_cancel:
+    en: "Cancel"
+    es: "Cancelar"
+    zh_ch: "取消"
+  button_refresh:
+    en: "Reload"
+    es: "Recarga"
+    zh_ch: "刷新"
+  button_load:
+    en: "Load"
+    es: "Cargar"
+    zh_ch: "加载"
+  button_lockPlan:
+    en: "Configure plan as selected"
+    es: "Configurar plan como seleccionado"
+    zh_ch: "设置所选为当前测试计划"
+  button_folderHistory:
+    en: "Open History folder"
+    es: "Abrir carpeta de historia"
+    zh_ch: "打开测试记录文件夹"
+  button_clearLog:
+    en: "Clear"
+    es: "Borrar"
+    zh_ch: "清除"
+  button_language:
+    en: "Language"
+    es: "Idioma"
+    zh_ch: "语言"
+  label_testplan:
+    en: "Testing Plan"
+    es: "Plan de testing"
+    zh_ch: "测试计划"
+  label_history:
+    en: "Testing history"
+    es: "Historia de testing"
+    zh_ch: "测试记录"
+  label_current:
+    en: "Current testing"
+    es: "Testing en curso"
+    zh_ch: "当前测试"
+  label_selectedPlan:
+    en: "Selected plan"
+    es: "Plan seleccionado"
+    zh_ch: "当前测试计划"
+  label_portDUT:
+    en: "DUT port:"
+    es: "Puerto de DUT:"
+    zh_ch: "DUT端口"
+  label_portREF:
+    en: "REF port:"
+    es: "Puerto de REF:"
+    zh_ch: "REF端口"

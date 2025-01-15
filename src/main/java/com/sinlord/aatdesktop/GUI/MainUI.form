@@ -1,24 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.sinlord.aatdesktop.GUI.MainUI">
-  <grid id="27dc6" layout-manager="GridLayoutManager" row-count="16" column-count="6" same-size-horizontally="true" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="panel_main" layout-manager="GridLayoutManager" row-count="9" column-count="8" same-size-horizontally="true" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="5" left="5" bottom="5" right="5"/>
     <constraints>
-      <xy x="20" y="20" width="1285" height="883"/>
+      <xy x="20" y="20" width="1651" height="883"/>
     </constraints>
     <properties/>
     <border type="none"/>
     <children>
-      <component id="df6fe" class="javax.swing.JLabel" binding="label_current">
-        <constraints>
-          <grid row="5" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="label_current"/>
-        </properties>
-      </component>
       <scrollpane id="91c83">
         <constraints>
-          <grid row="6" column="3" row-span="10" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="5" column="4" row-span="3" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
         <border type="none"/>
@@ -31,28 +23,15 @@
       </scrollpane>
       <component id="f61b9" class="javax.swing.JLabel" binding="label_testplan">
         <constraints>
-          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="label_testplan"/>
         </properties>
       </component>
-      <scrollpane id="40c7f">
-        <constraints>
-          <grid row="1" column="3" row-span="2" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties/>
-        <border type="none"/>
-        <children>
-          <component id="237bd" class="javax.swing.JTable" binding="table_plan">
-            <constraints/>
-            <properties/>
-          </component>
-        </children>
-      </scrollpane>
       <component id="7926e" class="javax.swing.JButton" binding="button_refreshDUT">
         <constraints>
-          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="button_refreshDUT"/>
@@ -60,7 +39,7 @@
       </component>
       <component id="d700a" class="javax.swing.JTextArea" binding="textArea_DUT">
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="3" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="1" column="0" row-span="1" col-span="4" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="50"/>
           </grid>
         </constraints>
@@ -70,7 +49,7 @@
       </component>
       <component id="f2872" class="javax.swing.JTextArea" binding="textArea_REF">
         <constraints>
-          <grid row="3" column="0" row-span="4" col-span="3" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="3" column="0" row-span="3" col-span="4" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
             <preferred-size width="273" height="50"/>
           </grid>
         </constraints>
@@ -78,51 +57,17 @@
           <editable value="false"/>
         </properties>
       </component>
-      <component id="95147" class="javax.swing.JButton" binding="button_addPlan">
-        <constraints>
-          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="497" height="34"/>
-          </grid>
-        </constraints>
-        <properties>
-          <text value="button_addPlan"/>
-        </properties>
-      </component>
-      <component id="dd7e9" class="javax.swing.JButton" binding="button_updatePlan">
-        <constraints>
-          <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="button_updatePlan"/>
-        </properties>
-      </component>
-      <component id="4cd5b" class="javax.swing.JButton" binding="button_deletePlan">
-        <constraints>
-          <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="button_deletePlan"/>
-        </properties>
-      </component>
       <component id="f2fa8" class="javax.swing.JButton" binding="button_refreshPlan">
         <constraints>
-          <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="button_refreshPlan"/>
         </properties>
       </component>
-      <component id="d529c" class="javax.swing.JButton" binding="button_testSwitch">
-        <constraints>
-          <grid row="5" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="button_testSwitch"/>
-        </properties>
-      </component>
       <scrollpane id="9bebf">
         <constraints>
-          <grid row="9" column="0" row-span="6" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="7" column="0" row-span="1" col-span="4" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
         <border type="none"/>
@@ -133,67 +78,25 @@
           </component>
         </children>
       </scrollpane>
-      <component id="25c65" class="javax.swing.JButton" binding="button_refreshHistory">
-        <constraints>
-          <grid row="15" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="button_refreshHistory"/>
-        </properties>
-      </component>
-      <component id="c24a3" class="javax.swing.JButton" binding="button_loadHistory">
-        <constraints>
-          <grid row="15" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="button_loadHistory"/>
-        </properties>
-      </component>
-      <component id="daa99" class="javax.swing.JButton" binding="button_deleteHistory">
-        <constraints>
-          <grid row="15" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="button_deleteHistory"/>
-        </properties>
-      </component>
       <component id="52701" class="javax.swing.JButton" binding="button_refreshREF">
         <constraints>
-          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="button_refreshREF"/>
         </properties>
       </component>
-      <component id="12bbf" class="javax.swing.JLabel" binding="label_selectedPlan">
-        <constraints>
-          <grid row="4" column="3" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="label_selectedPlan"/>
-        </properties>
-      </component>
       <component id="933c4" class="javax.swing.JLabel" binding="label_history">
         <constraints>
-          <grid row="7" column="0" row-span="2" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="label_history"/>
         </properties>
       </component>
-      <component id="36e26" class="javax.swing.JButton" binding="button_lockPlan">
-        <constraints>
-          <grid row="4" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="button_lockPlan"/>
-        </properties>
-      </component>
       <component id="4f459" class="javax.swing.JButton" binding="button_connectDUT">
         <constraints>
-          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="497" height="34"/>
-          </grid>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="button_connectDUT"/>
@@ -201,7 +104,7 @@
       </component>
       <component id="60652" class="javax.swing.JTextField" binding="textField_PortDUT">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
@@ -209,9 +112,7 @@
       </component>
       <component id="834e" class="javax.swing.JButton" binding="button_connectREF">
         <constraints>
-          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
-            <preferred-size width="497" height="34"/>
-          </grid>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <text value="button_connectREF"/>
@@ -219,12 +120,165 @@
       </component>
       <component id="675f5" class="javax.swing.JTextField" binding="textField_PortREF">
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
           </grid>
         </constraints>
         <properties/>
       </component>
+      <component id="8c355" class="javax.swing.JLabel" binding="label_portDUT">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <labelFor value="60652"/>
+          <text value="port"/>
+        </properties>
+      </component>
+      <component id="1c78c" class="javax.swing.JLabel" binding="label_portREF">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <labelFor value="675f5"/>
+          <text value="port"/>
+        </properties>
+      </component>
+      <component id="63d3c" class="javax.swing.JButton" binding="button_folderHistory">
+        <constraints>
+          <grid row="8" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="button_folderHistory"/>
+        </properties>
+      </component>
+      <scrollpane id="cdefc">
+        <constraints>
+          <grid row="1" column="7" row-span="7" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="1a7ea" class="javax.swing.JTextPane" binding="textPane_log">
+            <constraints/>
+            <properties>
+              <editable value="false"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+      <component id="5a58b" class="javax.swing.JComboBox" binding="comboBox_plan">
+        <constraints>
+          <grid row="1" column="4" row-span="1" col-span="3" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+      </component>
+      <component id="95147" class="javax.swing.JButton" binding="button_addPlan">
+        <constraints>
+          <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="button_addPlan"/>
+        </properties>
+      </component>
+      <component id="dd7e9" class="javax.swing.JButton" binding="button_updatePlan">
+        <constraints>
+          <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="button_updatePlan"/>
+        </properties>
+      </component>
+      <component id="4cd5b" class="javax.swing.JButton" binding="button_deletePlan">
+        <constraints>
+          <grid row="2" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="button_deletePlan"/>
+        </properties>
+      </component>
+      <component id="df6fe" class="javax.swing.JLabel" binding="label_current">
+        <constraints>
+          <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="label_current"/>
+        </properties>
+      </component>
+      <component id="3dd82" class="javax.swing.JButton" binding="button_cancelTest">
+        <constraints>
+          <grid row="8" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="button_cancelTest"/>
+        </properties>
+      </component>
+      <vspacer id="5cb60">
+        <constraints>
+          <grid row="3" column="6" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="3593b" class="javax.swing.JButton" binding="button_startTest">
+        <constraints>
+          <grid row="4" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="button_startTest"/>
+        </properties>
+      </component>
+      <component id="d529c" class="javax.swing.JButton" binding="button_pauseTest">
+        <constraints>
+          <grid row="4" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="button_pauseTest"/>
+        </properties>
+      </component>
+      <component id="6ffab" class="javax.swing.JButton" binding="button_clearLog">
+        <constraints>
+          <grid row="0" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="button_clearLog"/>
+        </properties>
+      </component>
+      <component id="9bf59" class="javax.swing.JButton" binding="button_language">
+        <constraints>
+          <grid row="8" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="button_language"/>
+        </properties>
+      </component>
+      <component id="25c65" class="javax.swing.JButton" binding="button_refreshHistory">
+        <constraints>
+          <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="button_refreshHistory"/>
+        </properties>
+      </component>
+      <component id="c24a3" class="javax.swing.JButton" binding="button_loadHistory">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="button_loadHistory"/>
+        </properties>
+      </component>
+      <component id="daa99" class="javax.swing.JButton" binding="button_deleteHistory">
+        <constraints>
+          <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="button_deleteHistory"/>
+        </properties>
+      </component>
     </children>
   </grid>
+  <inspectionSuppressions>
+    <suppress inspection="I18nForm"/>
+    <suppress inspection="NoLabelFor"/>
+    <suppress inspection="MissingMnemonic"/>
+  </inspectionSuppressions>
 </form>

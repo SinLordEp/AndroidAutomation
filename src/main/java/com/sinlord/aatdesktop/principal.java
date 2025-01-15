@@ -1,7 +1,7 @@
 package com.sinlord.aatdesktop;
 
 import com.sinlord.aatdesktop.control.MainController;
-import com.sinlord.aatdesktop.http.SocketClientPC;
+
 
 import java.io.IOException;
 import java.util.Properties;
@@ -15,20 +15,6 @@ public class principal {
         initializeProperties();
         MainController controller = new MainController();
         controller.run();
-        String host = "localhost";
-        int port = 8888;
-        try {
-            SocketClientPC client = new SocketClientPC(host, port);
-            if(client.connect()){
-                client.sendCommand("TEST_COMMAND");
-                client.close();
-            }else{
-                System.out.println("Connection failed");
-            }
-
-        } catch (Exception e) {
-            System.err.println(e.getMessage());
-        }
     }
 
     private static void initializeProperties() {
@@ -37,6 +23,10 @@ public class principal {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public static String getProperty(String property){
+        return PROPERTIES.getProperty(property);
     }
 
 }
