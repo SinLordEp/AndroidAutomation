@@ -31,10 +31,14 @@ public class SocketClientPC {
         return false;
     }
 
-    public void sendCommand(String command) throws IOException {
+    public String sendCommand(String command) throws IOException {
         out.println(command);
-        String response = in.readLine();
-        System.out.println("Received response: " + response);
+        StringBuilder result = new StringBuilder();
+        String response;
+        while((response = in.readLine()) != null && !response.isEmpty() && !"END_OF_RESPONSE".equals(response)) {
+            result.append(response).append("\n");
+        }
+        return result.toString();
     }
 
     public void close() throws IOException {

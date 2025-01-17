@@ -115,3 +115,15 @@ text:
     en: "Failed to connect REF "
     es: "No ha podido conectar REF "
     zh_ch: "未能连接REF "
+  DUT_INFO_ONGOING:
+    en: "Reading DUT device info..."
+    es: "Leyendo información de dispositivo DUT..."
+    zh_ch: "正在读取DUT设备信息..."
+  GENERAL_PASS:
+    en: "Successful!"
+    es: "Éxito!"
+    zh_ch: "成功！"
+  GENERAL_FAIL:
+    en: "Failed with cause: "
+    es: "Fallado por razón: "
+    zh_ch: "失败于: "

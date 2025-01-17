@@ -1,5 +1,6 @@
 package com.sinlord.aatdesktop.GUI;
 
+import com.sinlord.aatdesktop.control.Device;
 import com.sinlord.aatdesktop.control.MainController;
 
 import javax.swing.*;
@@ -133,6 +134,13 @@ public class MainUI{
             textPane_log.setCaretPosition(log_document.getLength());
         } catch (BadLocationException e) {
             UIText.getDialog().message("Failed to append log message with Cause: " + e.getMessage());
+        }
+    }
+
+    public void updateDeviceInfo(Device device, String info) {
+        switch(device){
+            case DUT -> textArea_DUT.setText(info);
+            case REF -> textArea_REF.setText(info);
         }
     }
 

@@ -35,7 +35,7 @@ public class MainController {
             DUT = new SocketClientPC("localhost", portDUT);
             if(DUT.connect()){
                 ui.appendLog(LogStage.PASS, "connectDUT_pass");
-                DUT.sendCommand("DUT_CHECK");
+                readDeviceInfo(Device.DUT);
             }else{
                 ui.appendLog(LogStage.ERROR, "connectDUT_failed");
             }
@@ -57,6 +57,35 @@ public class MainController {
             }
         } catch (Exception e) {
             ui.appendLog(LogStage.ERROR, "connectREF_failed", e.getMessage());
+        }
+    }
+
+    public void readDeviceInfo(Device device){
+        switch (device){
+            case DUT:
+                try {
+                    ui.appendLog(LogStage.ONGOING, "DUT_INFO_ONGOING");
+                    String response = DUT.sendCommand("DUT_INFO");
+                    if(!response.isEmpty()){
+                        ui.updateDeviceInfo(device, response);
+                        ui.appendLog(LogStage.PASS, "GENERAL_PASS");
+                    }
+                } catch (IOException e) {
+                    ui.appendLog(LogStage.ERROR, "GENERAL_FAIL", e.getMessage());
+                }
+                break;
+            case REF:
+                try {
+                    ui.appendLog(LogStage.ONGOING, "REF_INFO_ONGOING");
+                    String response = REF.sendCommand("REF_INFO");
+                    if(!response.isEmpty()){
+                        ui.updateDeviceInfo(device, response);
+                        ui.appendLog(LogStage.PASS, "GENERAL_PASS");
+                    }
+                } catch (IOException e) {
+                    ui.appendLog(LogStage.ERROR, "GENERAL_FAIL", e.getMessage());
+                }
+                break;
         }
     }
 
